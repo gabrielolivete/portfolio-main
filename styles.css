@@ -8,16 +8,16 @@
 }
 
 :root {
-    --primaria: #4f46e5;
-    --secundaria: #7c3aed;
-    --escuro: #0f172a;
-    --maisEscuro: #0a0f1c;
-    --claro: #e2e8f0;
-    --vidro: rgba(255, 255, 255, 0.1);
+    --primary: #4f46e5;
+    --secondary: #7c3aed;
+    --dark: #0f172a;
+    --darker: #0a0f1c;
+    --light: #e2e8f0;
+    --glass: rgba(255, 255, 255, 0.1);
     --nav-bg: rgba(15, 23, 42, 0.8);
     --box-shadow: rgba(79, 70, 229, 0.3);
     --blur-filter: rgba(255, 255, 255, 0.05);
-    --texto-card: rgba(226, 232, 240, 0.8);
+    --text-card: rgba(226, 232, 240, 0.8);
 }
 
 html {
@@ -25,11 +25,11 @@ html {
 }
 
 body {
-    background-color: var(--escuro);
-    color: var(--claro);
+    background-color: var(--dark);
+    color: var(--light);
 }
 
-.navegacao {
+.navigation {
     position: fixed;
     top: 0;
     background: var(--nav-bg);
@@ -46,7 +46,7 @@ body {
 }
 
 .menu-link {
-    color: var(--claro);
+    color: var(--light);
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
@@ -59,7 +59,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, var(--primaria), var(--secundaria)); 
+    background: linear-gradient(90deg, var(--primary), var(--secondary)); 
 }
 
 .menu-link:hover::after {
@@ -67,7 +67,7 @@ body {
     transition: width 0.5s ease;
 }
 
-.cabecalho {
+.header {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -75,64 +75,64 @@ body {
     flex-direction: column;
 }
 
-.foto-perfil {
+.profile-photo {
     width: 280px;
     height: 280px;
     object-fit: cover;
     box-shadow: 0 0 20px var(--box-shadow);
     border-radius: 50%;
-    border: 4px solid var(--vidro);
+    border: 4px solid var(--glass);
     animation: flutuar 5s ease-in-out infinite;
 }
 
 h1 {
-    color: var(--primaria);
+    color: var(--primary);
     font-weight: bold;
     margin: 20px;
 }
 
-.texto-cabecalho {
+.header-text {
     font-size: 1.5rem;
-    color: var(--claro);
+    color: var(--light);
 }
 
-.sobre {
+.about {
     padding: 6rem 2rem;
 }
 
-.sobre-titulo {
+.about-title {
     font-size: 3rem;
-    color: var(--claro);
+    color: var(--light);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.sobre-box {
+.about-box {
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 16px;
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--glass);
     background: var(--blur-filter);
     backdrop-filter: blur(10px);
 }
 
-.sobre-texto {
+.about-text {
     text-align: center;
     font-size: 1.2rem;
 }
 
-.projetos {
+.projects {
     padding: 6rem 2rem;
 }
 
-.projetos-titulo{
+.projects-title{
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-.projetos-box {
+.projects-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -140,34 +140,34 @@ h1 {
     margin: 0 auto;
 }
 
-.projetos-card {
+.projects-card {
     background: var(--blur-filter);
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--glass);
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
-.projetos-card:hover {
+.projects-card:hover {
     box-shadow: 0 10px 20px var(--box-shadow);
     transform: translateY(-10px) scale(1.03);
     cursor: pointer;
 }
 
-.projetos-imagem {
+.projects-img {
     height: 200px;
     width: 100%;
     object-fit: cover;
 }
 
-.info-projetos {
+.projects-info {
     margin-bottom: 10px;
-    color: var(--claro);
+    color: var(--light);
 }
 
-.texto-projetos {
-    color: var(--texto-card);
+.projects-text {
+    color: var(--text-card);
     line-height: 1.25rem;
 }
 
@@ -175,48 +175,48 @@ h1 {
     padding: 1.5rem;
 }
 
-.contatos {
+.contacts {
     padding: 6rem 2rem;
 }
 
-.contatos-titulo {
+.contacts-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-.formulario-contato {
+.contacts-form {
     max-width: 600px;
     margin: 0 auto;
     background: var(--blur-filter);
     backdrop-filter: blur(5px);
     padding: 2rem;
-    border: 1px solid var(--vidro);
+    border: 1px solid var(--glass);
     border-radius: 16px;
 }
 
-.grupo-form {
+.form-group {
     margin-bottom: 1.5rem;
 }
 
-.campo-form {
+.form-field {
     width: 100%;
     padding: 1rem;
     background: var(--blur-filter);
     border-radius: 8px;
-    border: 1px solid var(--vidro);
-    color: var(--claro);
+    border: 1px solid var(--glass);
+    color: var(--glass);
     outline: none;
 }
 
-.campo-form:focus {
-    border-color: var(--secundaria);
+.form-field:focus {
+    border-color: var(--secondary);
     box-shadow: 0 0 10px var(--box-shadow);
 }
 
-.botao-form {
+.form-button {
     color: var(--claro);
-    background: linear-gradient(45deg, var(--primaria), var(--secundaria));
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
     padding: 1rem 2rem;
     border: none;
     border-radius: 8px;
@@ -226,12 +226,12 @@ h1 {
     transition: all 0.5s ease;
 }
 
-.botao-form:hover {
+.form-button:hover {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px var(--box-shadow);
 }
 
-.particulas {
+.particles {
     position: fixed;
     top: 0;
     left: 0;
@@ -240,9 +240,9 @@ h1 {
     z-index: -1;
     opacity: 0.5;
     background: 
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 20%),
-    var(--maisEscuro);
+    radial-gradient(circle at 10% 20%, var(--primary) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, var(--secondary) 0%, transparent 20%),
+    var(--darker);
 }
 
 @keyframes flutuar {
@@ -260,12 +260,12 @@ h1 {
         gap: 2rem;
     }
 
-    .cabecalho {
+    .header {
         padding: 2rem;
         text-align: center;
     }
 
-    .foto-perfil {
+    .profile-photo {
         width: 240px;
         height: 240px;
     }
@@ -274,26 +274,26 @@ h1 {
         font-size: 2.5rem;
     }
 
-    .texto-cabecalho {
+    .header-text {
         font-size: 1.3rem;
     }
 
-    .sobre,
-    .projetos,
-    .contatos {
+    .about,
+    .projects,
+    .contacts {
         padding: 5rem 1.5rem;
     }
 
-    .sobre-titulo,
-    .projetos-titulo,
-    .contatos-titulo {
+    .about-title,
+    .projects-title,
+    .contacts-title {
         font-size: 2.3rem;
     }
 }
 
 @media (max-width: 768px) {
 
-    .navegacao {
+    .navigation {
         padding: 1rem;
     }
 
@@ -306,12 +306,12 @@ h1 {
         font-size: 0.95rem;
     }
 
-    .cabecalho {
+    .header {
         padding: 1rem;
         text-align: center;
     }
 
-    .foto-perfil {
+    .profile-photo {
         width: 180px;
         height: 180px;
     }
@@ -321,50 +321,50 @@ h1 {
         margin: 15px 0;
     }
 
-    .texto-cabecalho {
+    .header-text {
         font-size: 1rem;
         max-width: 300px;
     }
 
-    .sobre,
-    .projetos,
-    .contatos {
+    .about,
+    .projects,
+    .contacts {
         padding: 4rem 1rem;
     }
 
-    .sobre-titulo,
-    .projetos-titulo,
-    .contatos-titulo {
+    .about-title,
+    .projects-title,
+    .contacts-title {
         font-size: 1.8rem;
         margin-bottom: 30px;
     }
 
-    .sobre-box {
+    .about-box {
         padding: 1.5rem;
     }
 
-    .sobre-texto {
+    .about-text {
         font-size: 1rem;
         line-height: 1.6rem;
     }
 
-    .projetos-box {
+    .projects-box {
         grid-template-columns: 1fr;
     }
 
-    .projetos-imagem {
+    .projects-img {
         height: 180px;
     }
 
-    .formulario-contato {
+    .contacts-form {
         padding: 1.5rem;
     }
 
-    .campo-form {
+    .form-field {
         padding: 0.9rem;
     }
 
-    .botao-form {
+    .form-button {
         padding: 0.9rem;
     }
 }
@@ -379,7 +379,7 @@ h1 {
         font-size: 0.85rem;
     }
 
-    .foto-perfil {
+    .profile-photo {
         width: 150px;
         height: 150px;
     }
@@ -388,18 +388,18 @@ h1 {
         font-size: 1.7rem;
     }
 
-    .texto-cabecalho {
+    .header-text {
         font-size: 0.9rem;
     }
 
-    .sobre-titulo,
-    .projetos-titulo,
-    .contatos-titulo {
+    .about-title,
+    .projects-title,
+    .contacts-title {
         font-size: 1.5rem;
     }
 
-    .sobre-texto,
-    .texto-projetos {
+    .about-text,
+    .projects-text {
         font-size: 0.95rem;
     }
 

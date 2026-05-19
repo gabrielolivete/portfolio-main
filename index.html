@@ -5,61 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Gabriel Olivete | Portfólio</title>
+    <title>Gabriel Olivete | Portfolio</title>
 </head>
 
 <body>
-    <div class="particulas"></div>
-    <nav class="navegacao">
+    <div class="particles"></div>
+    <nav class="navigation">
         <ul class="menu">
             <li>
-                <a href="#inicio" class="menu-link">Início</a>
+                <a href="#home" class="menu-link">Home</a>
             </li>
             <li>
-                <a href="#sobre" class="menu-link">Sobre</a>
+                <a href="#about" class="menu-link">About</a>
             </li>
             <li>
-                <a href="#projetos" class="menu-link">Projetos</a>
+                <a href="#projects" class="menu-link">Projects</a>
             </li>
             <li>
-                <a href="#contatos" class="menu-link">Contato</a>
+                <a href="#contacts" class="menu-link">Contact</a>
             </li>
         </ul>
     </nav>
-    <main id="inicio" class="cabecalho">
-        <img src="./img/perfil-2.png" alt="Foto de Gabriel Olivete" class="foto-perfil">
+    <main id="home" class="header">
+        <img src="./img/profile-photo2.png" alt="Gabriel Olivete photo" class="profile-photo">
         <h1>Gabriel Olivete</h1>
-        <p class="texto-cabecalho">Zootecnista | Analista de Dados e Desenvolvedor em formação</p>
+        <p class="header-text">Animal Scientist | Aspiring Data Analyst & Developer</p>
     </main>
-    <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
-        <div class="sobre-box">
-            <p class="sobre-texto">Atuei na área de piscicultura utilizando análise de dados produtivos para tomada de decisão e         orientação técnica. Durante essa experiência, desenvolvi interesse por tecnologia e análise de dados, o que me levou à formação em Análise e Desenvolvimento de Sistemas.
-            </p>
+    <section id="about" class="about">
+        <h2 class="about-title">About Me</h2>
+        <div class="about-box">
+            <p class="about-text">My background is in aquaculture, where I used production data analysis to support decision-making and technical consulting. This experience sparked my interest in technology and data analytics, leading me to pursue a degree in Systems Analysis and Development.</p>
         </div>
     </section>
-    <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
-        <div class="projetos-box">
-            <a href="https://gabrielolivete.github.io/projeto_cafeteria/" target="_blank" class="projetos-card">
-                <img src="./img/projeto-cafe.PNG" alt="foto do projeto" class="projetos-imagem">
+    <section id="projects" class="projects">
+        <h2 class="projects-title">My Projects</h2>
+        <div class="projects-box">
+            <a href="https://gabrielolivete.github.io/coffee-shop-pjt/" target="_blank" class="projects-card">
+                <img src="./img/coffee-shop.PNG" alt="project coffee shop" class="projects-img">
                 <div class="box-card">
-                    <h3 class="info-projetos">Cafena Café</h3>
-                    <p class="texto-projetos">Site de cafeteria feito com HTML e CSS, com visual moderno e responsivo. O projeto conta com menu de navegação, seção de produtos, informações da cafeteria e contato, trazendo uma experiência simples, bonita e agradável para quem acessa o site.</p>
+                    <h3 class="projects-info">Cafena Coffee</h3>
+                    <p class="projects-text">Coffee shop website built with HTML and CSS, featuring a modern and responsive design. The project includes a navigation menu, product section, coffee shop information, and contact area, providing a simple, visually appealing, and enjoyable user experience.</p>
                 </div>
             </a>
-            <a href="https://gabrielolivete.github.io/projeto_carros/" target="_blank" class="projetos-card">
-                <img src="./img/projeto-carro.png" alt="foto do projeto" class="projetos-imagem">
+            <a href="https://gabrielolivete.github.io/car-demo-pjt/" target="_blank" class="projects-card">
+                <img src="./img/car-demo.png" alt="project cars shop" class="projects-img">
                 <div class="box-card">
-                    <h3 class="info-projetos">FP Sellection</h3>
-                    <p class="texto-projetos">Site moderno de carros esportivos com animações suaves, visual premium e navegação dinâmica para destacar modelos exclusivos.</p>
+                    <h3 class="projects-info">FP Sellection</h3>
+                    <p class="projects-text">Modern sports car website featuring smooth animations, a premium design, and dynamic navigation to showcase exclusive car models.</p>
                 </div>
             </a>
-            <a href="#" target="_blank" class="projetos-card">
-                <img src="./img/projeto.png" alt="foto do projeto" class="projetos-imagem">
+            <a href="#" target="_blank" class="projects-card">
+                <img src="./img/project.png" alt="project photo" class="projects-img">
                 <div class="box-card">
-                    <h3 class="info-projetos">Nome do Projeto</h3>
-                    <p class="texto-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
+                    <h3 class="projects-info">Project Name</h3>
+                    <p class="projects-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
                         amet,sepudiandae fuga officiis alias assumenda quae quos voluptate tempore ea tenetur eveniet,
                         distinctio
                         excepturi? Incidunt laboriosam vitae ut quibusdam!</p>
@@ -67,17 +66,17 @@
             </a>
         </div>
     </section>
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
-        <form action="" id="formulario" class="formulario-contato" onsubmit="enviarMensagem(event)">
-            <div class="grupo-form">
-                <input type="text" placeholder="Nome" class="campo-form" id="nome">
+    <section id="contacts" class="contacts">
+        <h2 class="contacts-title">Contact Me</h2>
+        <form action="" id="form" class="contacts-form" onsubmit="enviarMensagem(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Name" class="form-field" id="name">
             </div>
-            <div class="grupo-form">
-                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem" rows="5"
-                    class="campo-form"></textarea>
+            <div class="form-group">
+                <textarea name="message" id="message" placeholder="Type your message" rows="5"
+                    class="form-field"></textarea>
             </div>
-            <button type="submit" class="botao-form">Enviar mensagem</button>
+            <button type="submit" class="form-button">Send message</button>
         </form>
     </section>
 
@@ -85,14 +84,14 @@
         function enviarMensagem(event) {
             event.preventDefault()
 
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5541998814995';
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const phone = '5541998814995';
 
-            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
-            const msgFormatada = encodeURIComponent(texto);
+            const text = `Hello! My name is ${name}, ${message}`;
+            const msgFormatted = encodeURIComponent(text);
 
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+            const url = `https://wa.me/${phone}?text=${msgFormatted}`;
 
             window.open(url, '_blank');
         }
