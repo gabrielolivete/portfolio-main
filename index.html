@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gabriel Olivete | Portfólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <img src="./img/perfil-2.png" alt="Foto de Gabriel Olivete" class="foto-perfil">
+        <h1>Gabriel Olivete</h1>
+        <p class="texto-cabecalho">Zootecnista | Analista de Dados e Desenvolvedor em formação</p>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-box">
+            <p class="sobre-texto">Atuei na área de piscicultura utilizando análise de dados produtivos para tomada de decisão e         orientação técnica. Durante essa experiência, desenvolvi interesse por tecnologia e análise de dados, o que me levou à formação em Análise e Desenvolvimento de Sistemas.
+            </p>
+        </div>
+    </section>
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-box">
+            <a href="https://gabrielolivete.github.io/projeto_cafeteria/" target="_blank" class="projetos-card">
+                <img src="./img/projeto-cafe.PNG" alt="foto do projeto" class="projetos-imagem">
+                <div class="box-card">
+                    <h3 class="info-projetos">Cafena Café</h3>
+                    <p class="texto-projetos">Site de cafeteria feito com HTML e CSS, com visual moderno e responsivo. O projeto conta com menu de navegação, seção de produtos, informações da cafeteria e contato, trazendo uma experiência simples, bonita e agradável para quem acessa o site.</p>
+                </div>
+            </a>
+            <a href="https://gabrielolivete.github.io/projeto_carros/" target="_blank" class="projetos-card">
+                <img src="./img/projeto-carro.png" alt="foto do projeto" class="projetos-imagem">
+                <div class="box-card">
+                    <h3 class="info-projetos">FP Sellection</h3>
+                    <p class="texto-projetos">Site moderno de carros esportivos com animações suaves, visual premium e navegação dinâmica para destacar modelos exclusivos.</p>
+                </div>
+            </a>
+            <a href="#" target="_blank" class="projetos-card">
+                <img src="./img/projeto.png" alt="foto do projeto" class="projetos-imagem">
+                <div class="box-card">
+                    <h3 class="info-projetos">Nome do Projeto</h3>
+                    <p class="texto-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum
+                        amet,sepudiandae fuga officiis alias assumenda quae quos voluptate tempore ea tenetur eveniet,
+                        distinctio
+                        excepturi? Incidunt laboriosam vitae ut quibusdam!</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form action="" id="formulario" class="formulario-contato" onsubmit="enviarMensagem(event)">
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem" rows="5"
+                    class="campo-form"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar mensagem</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarMensagem(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5541998814995';
+
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+
+
+    </script>
+</body>
+
+</html>
