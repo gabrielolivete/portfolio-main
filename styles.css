@@ -1,3 +1,5 @@
+@import url('./src/css/variables.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +9,46 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-    --primary: #4f46e5;
-    --secondary: #7c3aed;
-    --dark: #0f172a;
-    --darker: #0a0f1c;
-    --light: #e2e8f0;
-    --glass: rgba(255, 255, 255, 0.1);
-    --nav-bg: rgba(15, 23, 42, 0.8);
-    --box-shadow: rgba(79, 70, 229, 0.3);
-    --blur-filter: rgba(255, 255, 255, 0.05);
-    --text-card: rgba(226, 232, 240, 0.8);
-}
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.88),
+            rgba(0,0,0,0.88)
+        ),
+        url('./src/img/bg1.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: blur(6px);
+    transform: scale(1.1);
 }
 
 .navigation {
     position: fixed;
     top: 0;
-    background: var(--nav-bg);
     width: 100%;
     z-index: 100;
     padding: 1.5rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(30px);
 }
 
 .menu {
@@ -46,7 +58,7 @@ body {
 }
 
 .menu-link {
-    color: var(--light);
+    color: var(--text-primary);
     font-weight: 500;
     position: relative;
     padding: 0.5rem 0;
@@ -76,12 +88,12 @@ body {
 }
 
 .profile-photo {
-    width: 280px;
-    height: 280px;
+    width: 360px;
+    height: 360px;
     object-fit: cover;
-    box-shadow: 0 0 20px var(--box-shadow);
+    box-shadow: 0 0 20px var(--shadow-primary);
     border-radius: 50%;
-    border: 4px solid var(--glass);
+    border: 4px solid var(--glass-bg);
     animation: flutuar 5s ease-in-out infinite;
 }
 
@@ -89,11 +101,13 @@ h1 {
     color: var(--primary);
     font-weight: bold;
     margin: 20px;
+    text-transform: uppercase;
 }
 
 .header-text {
     font-size: 1.5rem;
-    color: var(--light);
+    color: var(--text-primary);
+    text-transform: uppercase;
 }
 
 .about {
@@ -102,9 +116,10 @@ h1 {
 
 .about-title {
     font-size: 3rem;
-    color: var(--light);
+    color: var(--text-primary);
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .about-box {
@@ -112,8 +127,8 @@ h1 {
     max-width: 600px;
     margin: 0 auto;
     border-radius: 16px;
-    border: 1px solid var(--glass);
-    background: var(--blur-filter);
+    border: 1px solid var(--glass-bg);
+    background: var(--blur-bg);
     backdrop-filter: blur(10px);
 }
 
@@ -130,6 +145,7 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
 .title-icons {
@@ -148,16 +164,16 @@ h1 {
 }
 
 .projects-card {
-    background: var(--blur-filter);
+    background: var(--blur-bg);
     border-radius: 16px;
     backdrop-filter: blur(5px);
-    border: 1px solid var(--glass);
+    border: 1px solid var(--glass-bg);
     overflow: hidden;
     transition: all 0.5s ease;
 }
 
 .projects-card:hover {
-    box-shadow: 0 10px 20px var(--box-shadow);
+    box-shadow: 0 10px 20px var(--shadow-primary);
     transform: translateY(-10px) scale(1.03);
     cursor: pointer;
 }
@@ -169,7 +185,7 @@ h1 {
 }
 
 .projects-info {
-    color: var(--light);
+    color: var(--text-primary);
 }
 
 .icons {
@@ -177,13 +193,13 @@ h1 {
     gap: 10px;
 }
 
-.icons img {
-    width: 30px;
-    height: 30px;
+.icons i {
+    color: var(--text-primary);
+    font-size: 1.5rem;
 }
 
 .projects-text {
-    color: var(--text-card);
+    color: var(--text-secondary);
     line-height: 1.25rem;
 }
 
@@ -199,15 +215,16 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
 .contacts-form {
     max-width: 600px;
     margin: 0 auto;
-    background: var(--blur-filter);
+    background: var(--blur-bg);
     backdrop-filter: blur(5px);
     padding: 2rem;
-    border: 1px solid var(--glass);
+    border: 1px solid var(--glass-bg);
     border-radius: 16px;
 }
 
@@ -218,20 +235,20 @@ h1 {
 .form-field {
     width: 100%;
     padding: 1rem;
-    background: var(--blur-filter);
+    background: var(--blur-bg);
     border-radius: 8px;
-    border: 1px solid var(--glass);
-    color: var(--glass);
+    border: 1px solid var(--glass-bg);
+    color: var(--glass-bg);
     outline: none;
 }
 
 .form-field:focus {
     border-color: var(--secondary);
-    box-shadow: 0 0 10px var(--box-shadow);
+    box-shadow: 0 0 10px var(--shadow-primary);
 }
 
 .form-button {
-    color: var(--claro);
+    color: var(--text-primary);
     background: linear-gradient(45deg, var(--primary), var(--secondary));
     padding: 1rem 2rem;
     border: none;
@@ -244,21 +261,18 @@ h1 {
 
 .form-button:hover {
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px var(--box-shadow);
+    box-shadow: 0 5px 15px var(--shadow-primary);
 }
 
-.particles {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.5;
-    background: 
-    radial-gradient(circle at 10% 20%, var(--primary) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, var(--secondary) 0%, transparent 20%),
-    var(--darker);
+footer {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    text-align: center;
+    padding: 12px;
+
+    p {
+        font-size: 0.8rem;
+    }
 }
 
 @keyframes flutuar {
@@ -328,8 +342,8 @@ h1 {
     }
 
     .profile-photo {
-        width: 180px;
-        height: 180px;
+        width: 240px;
+        height: 240px;
     }
 
     h1 {
