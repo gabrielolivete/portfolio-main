@@ -1,4 +1,4 @@
-@import url('./src/css/variables.css');
+@import url('./variables.css');
 
 * {
     margin: 0;
@@ -32,7 +32,7 @@ body::before {
             rgba(0,0,0,0.88),
             rgba(0,0,0,0.88)
         ),
-        url('./src/img/bg1.jpg');
+        url('../img/bg1.jpg');
 
     background-size: cover;
     background-position: center;
@@ -135,6 +135,10 @@ h1 {
 .about-text {
     text-align: center;
     font-size: 1.2rem;
+}
+
+.about-text span {
+    color: var(--accent);
 }
 
 .projects {
