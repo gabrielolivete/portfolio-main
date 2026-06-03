@@ -202,6 +202,11 @@ h1 {
     font-size: 1.5rem;
 }
 
+.icons img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .projects-text {
     color: var(--text-secondary);
     line-height: 1.25rem;
@@ -209,6 +214,26 @@ h1 {
 
 .box-card {
     padding: 1.5rem;
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: var(--text-muted);
+    margin: 20px;
+    transition: all 0.5s ease;
+}
+
+.social-icons a:hover {
+    color: var(--text-primary);
+    transform: translateY(-4px);
 }
 
 .contacts {
